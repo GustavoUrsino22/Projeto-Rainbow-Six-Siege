@@ -1,0 +1,8 @@
+streamlit>=1.30.0
+pandas>=2.0.0
+plotly>=5.18.0
+undetected-chromedriver>=3.5.4
+selenium>=4.17.2
+opencv-python>=4.9.0
+easyocr>=1.7.1
+numpy>=1.26.0
