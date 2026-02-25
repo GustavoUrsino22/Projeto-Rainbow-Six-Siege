@@ -1,252 +1,996 @@
+# app.py
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import time
-from scraper import get_r6_team_stats
-from ocr_processor import process_lobby_screenshot
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import json
+import os
+from datetime import datetime
+import unicodedata
+from streamlit_echarts import st_echarts
 
-st.set_page_config(page_title="R6 Tactical Suite", layout="wide", page_icon="⚔️")
+from analyzer import R6Analyzer
+from config import TIME_ALIADO, TIME_ADVERSARIO, SEASON_ATUAL, PLAYLIST
 
-ATACANTES = [
-    "sledge", "thatcher", "ash", "thermite", "twitch", "montagne", "glaz", "fuze", 
-    "blitz", "iq", "buck", "blackbeard", "capitao", "hibana", "jackal", "ying", 
-    "zofia", "dokkaebi", "lion", "finka", "maverick", "nomad", "gridlock", "nokk", 
-    "amaru", "kali", "iana", "ace", "zero", "flores", "osa", "sens", "grim", 
-    "brava", "ram", "deimos", "striker"
-]
 
+# ══════════════════════════════════════════════
+#  CONFIGURAÇÃO DA PÁGINA
+# ══════════════════════════════════════════════
+
+st.set_page_config(
+    page_title="R6 Team Analyzer",
+    page_icon="🎯",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# CSS customizado
 st.markdown("""
-    <style>
-    .role-header-atk { color: #ff4b4b; font-size: 1.1rem; font-weight: bold; border-bottom: 2px solid #ff4b4b; padding-bottom: 5px; margin-top: 15px; margin-bottom: 10px; }
-    .role-header-def { color: #0088ff; font-size: 1.1rem; font-weight: bold; border-bottom: 2px solid #0088ff; padding-bottom: 5px; margin-top: 15px; margin-bottom: 10px; }
-    .player-card { background-color: #262730; border-radius: 10px; padding: 15px; border-top: 5px solid #fff; text-align: center; margin-bottom: 10px;}
-    .ai-insight { background-color: #161b22; border-left: 4px solid #a371f7; padding: 15px; border-radius: 8px; margin-top: 20px; margin-bottom: 20px; font-family: monospace;}
-    </style>
+<style>
+    .main-header {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: #FF6B35;
+        text-align: center;
+        padding: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    .sub-header {
+        font-size: 1.2rem;
+        color: #888;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .metric-card {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        border-radius: 12px;
+        padding: 1.5rem;
+        border-left: 4px solid #FF6B35;
+        margin: 0.5rem 0;
+    }
+    .pick-card {
+        background: linear-gradient(135deg, #0d3b0d 0%, #1a5c1a 100%);
+        border-radius: 8px;
+        padding: 0.8rem;
+        text-align: center;
+        border: 1px solid #2ecc71;
+    }
+    .ban-card {
+        background: linear-gradient(135deg, #3b0d0d 0%, #5c1a1a 100%);
+        border-radius: 8px;
+        padding: 0.8rem;
+        text-align: center;
+        border: 1px solid #e74c3c;
+    }
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 8px;
+    }
+    .stTabs [data-baseweb="tab"] {
+        background-color: #1a1a2e;
+        border-radius: 8px;
+        padding: 10px 20px;
+    }
+</style>
 """, unsafe_allow_html=True)
 
-def render_op_card(op, role):
-    color = "#ff4b4b" if role == "atk" else "#0088ff"
-    img_html = f'<img src="{op.get("Icone", "")}" width="38" height="38" style="border-radius:5px; margin-right:12px; object-fit: cover;">' if op.get("Icone") else ''
-    return f"""
-    <div style="background-color: #1e212b; border-left: 4px solid {color}; border-radius: 6px; padding: 10px; margin-bottom: 8px; display: flex; align-items: center;">
-        {img_html}
-        <div style="flex-grow: 1;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px;">
-                <span style="font-weight: bold; font-size: 0.95rem; color:#fff;">{op['Agente']}</span>
-                <span style="font-size: 0.8rem; color: #aaa;">{op['Partidas']} j</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #ccc; margin-bottom: 5px;">
-                <span>WR: <b>{op['WinPct']}%</b></span>
-                <span>KD: <b>{op['KD']}</b></span>
-            </div>
-            <div style="width: 100%; background-color: #333; height: 6px; border-radius: 3px;">
-                <div style="width: {min(op['WinPct'], 100)}%; background-color: {color}; height: 100%; border-radius: 3px;"></div>
-            </div>
-        </div>
-    </div>
-    """
 
-if "final_players" not in st.session_state: st.session_state.final_players = []
-if "map_data" not in st.session_state: st.session_state.map_data = None
-if "agent_data" not in st.session_state: st.session_state.agent_data = None
-if "fase_data" not in st.session_state: st.session_state.fase_data = None
-for i in range(5):
-    if f"nick_{i}" not in st.session_state: st.session_state[f"nick_{i}"] = ""
-    if f"plat_{i}" not in st.session_state: st.session_state[f"plat_{i}"] = "ubi"
+# ══════════════════════════════════════════════
+#  FUNÇÕES AUXILIARES E CONSTANTES
+# ══════════════════════════════════════════════
+
+CACHE_DIR = "cache"
+
+ATTACKERS = [
+    "Sledge", "Thatcher", "Ash", "Thermite", "Twitch", "Montagne", "Glaz", "Fuze", 
+    "Blitz", "IQ", "Buck", "Blackbeard", "Capitão", "Hibana", "Jackal", "Ying", 
+    "Zofia", "Dokkaebi", "Lion", "Finka", "Maverick", "Nomad", "Gridlock", "Nøkk", 
+    "Amaru", "Kali", "Iana", "Ace", "Zero", "Flores", "Osa", "Sens", "Grim", 
+    "Brava", "Ram", "Deimos", "Striker", "Capitao", "Nokk"
+]
+
+DEFENDERS = [
+    "Smoke", "Mute", "Castle", "Pulse", "Doc", "Rook", "Kapkan", "Tachanka", 
+    "Jäger", "Jager", "Bandit", "Frost", "Valkyrie", "Caveira", "Echo", "Mira", 
+    "Lesion", "Ela", "Vigil", "Maestro", "Alibi", "Clash", "Kaid", "Mozzie", 
+    "Warden", "Goyo", "Wamai", "Oryx", "Melusi", "Aruni", "Thunderbird", "Thorn", 
+    "Azami", "Solis", "Fenrir", "Tubarão", "Tubarao", "Skopos", "Sentry"
+]
+
+def normalize_op(name):
+    return ''.join(c for c in unicodedata.normalize('NFD', name) if unicodedata.category(c) != 'Mn').lower()
+
+ATTACKERS_NORM = {normalize_op(op) for op in ATTACKERS}
+DEFENDERS_NORM = {normalize_op(op) for op in DEFENDERS}
+
+def get_role(op_name):
+    norm = normalize_op(op_name)
+    if norm in ATTACKERS_NORM: return "Ataque"
+    if norm in DEFENDERS_NORM: return "Defesa"
+    return "Desconhecido"
+
+
+def salvar_cache(dados, nome_time):
+    """Salva dados no cache local."""
+    os.makedirs(CACHE_DIR, exist_ok=True)
+    filepath = os.path.join(CACHE_DIR, f"{nome_time}.json")
+    dados_salvos = {
+        "timestamp": datetime.now().isoformat(),
+        "dados": dados
+    }
+    with open(filepath, "w", encoding="utf-8") as f:
+        json.dump(dados_salvos, f, ensure_ascii=False, indent=2)
+
+
+def carregar_cache(nome_time):
+    """Carrega dados do cache."""
+    filepath = os.path.join(CACHE_DIR, f"{nome_time}.json")
+    if os.path.exists(filepath):
+        with open(filepath, "r", encoding="utf-8") as f:
+            dados = json.load(f)
+        return dados
+    return None
+
+
+def buscar_dados_time(config_time, fetch_type="both", progress_bar=None):
+    """Busca dados do time via scrapper."""
+    from scraper import get_r6_team_stats
+
+    titulos = {
+        "both": "tudo...",
+        "maps": "mapas...",
+        "agentes": "operadores...",
+        "fase": "fase..."
+    }
+    desc = titulos.get(fetch_type, "dados...")
+
+    if progress_bar:
+        progress_bar.progress(10, text=f"Iniciando navegador para buscar {desc}")
+
+    resultado = get_r6_team_stats(
+        player_configs=config_time["jogadores"],
+        season=SEASON_ATUAL,
+        playlist=PLAYLIST,
+        fetch_type=fetch_type
+    )
+
+    if progress_bar:
+        progress_bar.progress(100, text="Coleta finalizada!")
+
+    return resultado
+
+def atualizar_estado_sessao(equipe, novos_dados, fetch_type="both"):
+    """Atualiza o state apenas com a parte que foi buscada."""
+    chave = f"dados_{equipe}"
+    if chave not in st.session_state:
+        st.session_state[chave] = {"mapas": [], "agentes": [], "fase": [], "erros": []}
+    
+    if fetch_type in ["both", "maps"]:
+        st.session_state[chave]["mapas"] = novos_dados.get("mapas", [])
+    if fetch_type in ["both", "agentes"]:
+        st.session_state[chave]["agentes"] = novos_dados.get("agentes", [])
+    if fetch_type in ["both", "fase"]:
+        st.session_state[chave]["fase"] = novos_dados.get("fase", [])
+    
+    erros = novos_dados.get("erros", [])
+    if erros:
+        st.session_state[chave]["erros"].extend(erros)
+        
+    salvar_cache(st.session_state[chave], equipe)
+
+
+# ══════════════════════════════════════════════
+#  SIDEBAR
+# ══════════════════════════════════════════════
 
 with st.sidebar:
-    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Rainbow_Six_Siege_logo.svg/1200px-Rainbow_Six_Siege_logo.svg.png", width=150)
-    st.header("🛠️ Menu Tático")
-    pagina = st.radio("Módulos:", ["📸 Scanner & Configuração", "📈 Fase Atual (W/L)", "🗺️ Estratégia de Mapas", "🔫 Inteligência de Agentes"])
+    st.image(
+        "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5P"
+        "NUQTn6UqGm0p5hso=/0/0/0/0/0/0/0/0/0/0/"
+        "placeholder.png",
+        width=60
+    )
+    st.title("⚙️ Controles")
+
     st.divider()
-    temporada = st.selectbox("Temporada:", ["Y10S4 (Atual)", "Geral"], index=0)
-    playlist = st.selectbox("Playlist:", ["Ranked", "Standard", "Casual"], index=0)
-    season_id = "40" if "Y10S4" in temporada else "all"
 
-# ==========================================
-# 1. SCANNER & CONFIGURAÇÃO
-# ==========================================
-if pagina == "📸 Scanner & Configuração":
-    st.title("📸 Scanner de Lobby")
-    col1, col2 = st.columns([1, 1.5])
-    
+    # ── Configuração de nicks inline ──
+    st.subheader("📝 Time Adversário")
+    col1, col2 = st.columns([7, 3])
     with col1:
-        st.subheader("1. IA de Visão")
-        img_file = st.file_uploader("Suba a foto", type=['png', 'jpg', 'jpeg'])
-        if img_file:
-            st.image(img_file, use_container_width=True)
-            if st.button("🔍 Extrair Nomes", type="primary"):
-                with open("temp.png", "wb") as f: f.write(img_file.getbuffer())
-                with st.spinner("Analisando..."):
-                    res = process_lobby_screenshot("temp.png")
-                    for i, p in enumerate(res["players"]):
-                        st.session_state[f"nick_{i}"] = p['nick']
-                        st.session_state[f"plat_{i}"] = p['platform']
-                    st.success("Concluído!")
-                    time.sleep(1)
-                    st.rerun()
-    
+        st.caption("Nick")
     with col2:
-        st.subheader("2. Esquadrão Inimigo")
-        temp_players = []
-        for i in range(5):
-            c_n, c_p = st.columns([2, 1])
-            n = c_n.text_input(f"Nick {i+1}", key=f"nick_{i}")
-            p = c_p.selectbox(f"Plat. {i+1}", ["psn", "xbl", "ubi"], key=f"plat_{i}")
-            if n.strip(): temp_players.append({"nick": n.strip(), "platform": p})
-        
-        if st.button("💾 CONFIRMAR SQUAD", use_container_width=True):
-            st.session_state.final_players = temp_players
-            st.session_state.map_data, st.session_state.agent_data, st.session_state.fase_data = None, None, None
-            st.success("Squad salvo!")
-            
-        if temp_players:
-            plats = [p['platform'] for p in temp_players]
-            if "ubi" in plats and ("psn" in plats or "xbl" in plats):
-                st.markdown('<div class="ai-insight">🤖 <b>Dica da IA:</b> Detectei Crossplay entre PC e Consoles. Espere variação no ritmo de jogo e possível falha de comunicação interna no time adversário (nem todos usam o mesmo chat de voz nativo).</div>', unsafe_allow_html=True)
-            elif "ubi" not in plats:
-                st.markdown('<div class="ai-insight">🤖 <b>Dica da IA:</b> Squad 100% Console. Foquem em posicionamento de mira cruzada; a movimentação de controle pode ser mais previsível sob pressão.</div>', unsafe_allow_html=True)
+        st.caption("Plataforma")
 
-# ==========================================
-# 2. FASE ATUAL (W/L)
-# ==========================================
-elif pagina == "📈 Fase Atual (W/L)":
-    st.title("📈 Fase Atual (Últimas Partidas)")
-    
-    if not st.session_state.final_players:
-        st.warning("⚠️ Salve o Squad primeiro.")
-    else:
-        if st.button("🚀 BUSCAR HISTÓRICO", type="primary"):
-            with st.status("Analisando partidas..."):
-                dados = get_r6_team_stats(st.session_state.final_players, season_id, playlist.lower(), fetch_type="fase")
-                if "erro_critico" not in dados: st.session_state.fase_data = dados["fase"]
+    for i in range(5):
+        df_nick = TIME_ADVERSARIO["jogadores"][i]["nick"] if i < len(TIME_ADVERSARIO["jogadores"]) else ""
+        df_plat = TIME_ADVERSARIO["jogadores"][i]["platform"] if i < len(TIME_ADVERSARIO["jogadores"]) else "uplay"
+        c1, c2 = st.columns([7, 3])
+        with c1:
+            st.text_input("Nick Adversário", value=df_nick, key=f"adv_nick_{i}", label_visibility="collapsed")
+        with c2:
+            st.selectbox("Plataforma Adversário", ["uplay", "psn", "xbl"], index=["uplay", "psn", "xbl"].index(df_plat) if df_plat in ["uplay", "psn", "xbl"] else 0, key=f"adv_plat_{i}", label_visibility="collapsed")
 
-        if st.session_state.fase_data:
-            total_w, total_l = 0, 0
-            tiltados = []
-            
-            for p in st.session_state.fase_data:
-                ws = p['History'].count('W')
-                ls = p['History'].count('L')
-                total_w += ws
-                total_l += ls
-                if ls > ws and ls >= 3:
-                    tiltados.append(p['Jogador'])
+    st.subheader("📝 Meu Time")
+    col1, col2 = st.columns([7, 3])
+    with col1:
+        st.caption("Nick")
+    with col2:
+        st.caption("Plataforma")
 
-            if total_w > total_l * 1.5:
-                st.markdown('<div class="ai-insight">🤖 <b>Dica da IA:</b> O adversário está em <b>WIN STREAK</b> (Alta Confiança). Eles provavelmente jogarão de forma agressiva nos primeiros rounds. Segurem o avanço inicial e punam a afobação deles.</div>', unsafe_allow_html=True)
-            elif tiltados:
-                nomes_tilt = ", ".join(tiltados)
-                st.markdown(f'<div class="ai-insight">🤖 <b>Dica da IA:</b> Detectei jogadores numa péssima fase ({nomes_tilt}). Eles estão <b>TILTADOS</b>. Joguem com agressividade em cima deles para quebrar o psicológico da equipe logo no round 1.</div>', unsafe_allow_html=True)
+    for i in range(5):
+        df_nick = TIME_ALIADO["jogadores"][i]["nick"] if i < len(TIME_ALIADO["jogadores"]) else ""
+        df_plat = TIME_ALIADO["jogadores"][i]["platform"] if i < len(TIME_ALIADO["jogadores"]) else "uplay"
+        c1, c2 = st.columns([7, 3])
+        with c1:
+            st.text_input("Nick Aliado", value=df_nick, key=f"ali_nick_{i}", label_visibility="collapsed")
+        with c2:
+            st.selectbox("Plataforma Aliado", ["uplay", "psn", "xbl"], index=["uplay", "psn", "xbl"].index(df_plat) if df_plat in ["uplay", "psn", "xbl"] else 0, key=f"ali_plat_{i}", label_visibility="collapsed")
+
+    st.divider()
+
+    # Removido os botões globais da sidebar para otimizar o carregamento.
+    # A busca agora é contextual dentro de cada Tab.
+
+
+
+    # Filtros
+    min_partidas_mapa = st.slider(
+        "Min. partidas (Mapas)",
+        1, 20, 3
+    )
+    min_partidas_op = st.slider(
+        "Min. partidas (Operadores)",
+        1, 20, 5
+    )
+    top_n_ops = st.slider(
+        "Top N Operadores",
+        5, 25, 10
+    )
+
+
+# ══════════════════════════════════════════════
+#  PROCESSAR NICKS DA SIDEBAR
+# ══════════════════════════════════════════════
+
+def get_jogadores_from_state(prefix):
+    """Coleta jogadores dos inputs individuais da sidebar."""
+    jogadores = []
+    for i in range(5):
+        nick = st.session_state.get(f"{prefix}_nick_{i}", "").strip()
+        if nick:
+            plat = st.session_state.get(f"{prefix}_plat_{i}", "uplay")
+            jogadores.append({"nick": nick, "platform": plat})
+    return jogadores
+
+
+# As lógicas de busca foram movidas para as seções de cada Tab.
+
+# Carregar do cache se não estiver na sessão
+if "dados_adversario" not in st.session_state:
+    cache = carregar_cache("adversario")
+    if cache:
+        st.session_state["dados_adversario"] = cache["dados"]
+
+if "dados_aliado" not in st.session_state:
+    cache = carregar_cache("aliado")
+    if cache:
+        st.session_state["dados_aliado"] = cache["dados"]
+
+
+# ══════════════════════════════════════════════
+#  HEADER
+# ══════════════════════════════════════════════
+
+st.markdown(
+    '<p class="main-header">🎯 R6 SIEGE TEAM ANALYZER</p>',
+    unsafe_allow_html=True
+)
+st.markdown(
+    '<p class="sub-header">'
+    'Inteligência tática para sua equipe competitiva'
+    '</p>',
+    unsafe_allow_html=True
+)
+
+
+# ══════════════════════════════════════════════
+#  TABS PRINCIPAIS
+# ══════════════════════════════════════════════
+
+tab1, tab2, tab3, tab4 = st.tabs([
+    "🗺️ Mapas Adversário",
+    "🎖️ Operadores Adversário",
+    "📊 Comparativo",
+    "🔥 Fase dos Jogadores"
+])
+
+
+# ── TAB 1: MAPAS DO ADVERSÁRIO ──
+with tab1:
+    col_hdr, col_btn1, col_btn2 = st.columns([2, 1, 1])
+    with col_hdr:
+        st.header("🗺️ Ferramenta 1: Melhores Mapas")
+    with col_btn1:
+        if st.button("🔍 Carregar Mapas (Adv)", key="btn_maps_adv"):
+            jogadores_adv = get_jogadores_from_state("adv")
+            if jogadores_adv:
+                config = {"nome": "adversario", "jogadores": jogadores_adv}
+                with st.spinner("🔍 Coletando dados do time adversário..."):
+                    progress = st.progress(0)
+                    dados = buscar_dados_time(config, fetch_type="maps", progress_bar=progress)
+                    atualizar_estado_sessao("adversario", dados, "maps")
+                st.success("✅ Mapas do adversário coletados!")
+            else:
+                st.error("Insira pelo menos um nick (Adv).")
+    with col_btn2:
+        if st.button("🔍 Carregar Mapas (Nós)", key="btn_maps_ali"):
+            jogadores_ali = get_jogadores_from_state("ali")
+            if jogadores_ali:
+                config = {"nome": "aliado", "jogadores": jogadores_ali}
+                with st.spinner("🔍 Coletando dados do seu time..."):
+                    progress = st.progress(0)
+                    dados = buscar_dados_time(config, fetch_type="maps", progress_bar=progress)
+                    atualizar_estado_sessao("aliado", dados, "maps")
+                st.success("✅ Mapas do aliado coletados!")
+            else:
+                st.error("Insira pelo menos um nick (Aliado).")
+
+    if "dados_adversario" in st.session_state and "mapas" in st.session_state["dados_adversario"] and len(st.session_state["dados_adversario"]["mapas"]) > 0:
+        analyzer_adv = R6Analyzer(st.session_state["dados_adversario"])
+        df_mapas = analyzer_adv.melhores_mapas_time(min_partidas_mapa)
+
+        if not df_mapas.empty:
+            # ── Métricas resumo ──
+            col1, col2, col3 = st.columns(3)
+            melhor_mapa = df_mapas.iloc[0]
+            pior_mapa = df_mapas.iloc[-1]
+
+            with col1:
+                st.metric(
+                    "🏆 Melhor Mapa do Adversário",
+                    melhor_mapa["Mapa"],
+                    f"{melhor_mapa['WinRate_Ponderado']}% WR"
+                )
+            with col2:
+                st.metric(
+                    "💀 Pior Mapa do Adversário",
+                    pior_mapa["Mapa"],
+                    f"{pior_mapa['WinRate_Ponderado']}% WR"
+                )
+            with col3:
+                st.metric(
+                    "📊 Mapas Analisados",
+                    len(df_mapas),
+                    f"{df_mapas['Total_Partidas'].sum()} partidas"
+                )
 
             st.divider()
-            for p_data in st.session_state.fase_data:
-                st.markdown(f"<h4 style='margin-bottom: 5px;'>{p_data['Jogador']}</h4>", unsafe_allow_html=True)
-                history_html = ""
-                for result in p_data['History']:
-                    if result == "W": history_html += '<span style="color: #00ffcc; font-weight: bold; font-size: 1.5rem; margin-right: 12px;">W</span>'
-                    elif result == "L": history_html += '<span style="color: #ff4b4b; font-weight: bold; font-size: 1.5rem; margin-right: 12px;">L</span>'
-                    elif result == "D": history_html += '<span style="color: #aaaaaa; font-weight: bold; font-size: 1.5rem; margin-right: 12px;">D</span>'
-                    else: history_html += '<span style="color: #555555; font-weight: bold; font-size: 1.5rem; margin-right: 12px;">?</span>'
-                st.markdown(f'<div style="background-color: #1e212b; padding: 10px 20px; border-radius: 8px; margin-bottom: 20px; border-left: 3px solid #555;">{history_html}</div>', unsafe_allow_html=True)
 
-# ==========================================
-# 3. ESTRATÉGIA DE MAPAS
-# ==========================================
-elif pagina == "🗺️ Estratégia de Mapas":
-    st.title("🗺️ Inteligência de Mapas")
-    
-    if not st.session_state.final_players:
-        st.warning("⚠️ Salve o Squad primeiro.")
-    else:
-        if st.button("🚀 BUSCAR MAPAS", type="primary"):
-            with st.status("Extraindo dados..."):
-                dados = get_r6_team_stats(st.session_state.final_players, season_id, playlist.lower(), fetch_type="maps")
-                if "erro_critico" not in dados: st.session_state.map_data = dados["mapas"]
+            # ── Gráfico principal de mapas ──
+            col_chart1, col_chart2 = st.columns([3, 2])
 
-        if st.session_state.map_data:
-            df_m = pd.DataFrame(st.session_state.map_data)
-            team_maps = df_m.groupby("Mapa").agg({"WinPct": "mean", "Partidas": "sum"}).sort_values("WinPct", ascending=False)
-            
-            if not team_maps.empty:
-                melhor_mapa = team_maps.iloc[0].name
-                pior_mapa = team_maps.iloc[-1].name
-                st.markdown(f"""
-                <div class="ai-insight">
-                    🤖 <b>Veredito da IA Tática:</b><br>
-                    ❌ <b>Obrigatório Banir:</b> {melhor_mapa} (Eles amam e dominam esse mapa).<br>
-                    ✅ <b>Forçar o Jogo:</b> Deixem {pior_mapa} aberto! É a maior fraqueza tática deles.
-                </div>
-                """, unsafe_allow_html=True)
-
-            st.divider()
-            m1, m2, m3 = st.columns(3)
-            for i, (mapa, row) in enumerate(team_maps.head(3).iterrows()):
-                [m1, m2, m3][i].metric(f"PRIORIDADE DE BAN {i+1}", mapa, f"{row['WinPct']:.1f}% WR")
-
-            fig = px.bar(team_maps.reset_index(), x="Mapa", y="WinPct", color="WinPct", title="Perigo Coletivo por Mapa (%)", color_continuous_scale="Reds", text_auto='.1f')
-            st.plotly_chart(fig, use_container_width=True)
-
-# ==========================================
-# 4. INTELIGÊNCIA DE AGENTES
-# ==========================================
-elif pagina == "🔫 Inteligência de Agentes":
-    st.title("🔫 Perfil Tático Visual")
-    
-    if not st.session_state.final_players:
-        st.warning("⚠️ Salve o Squad primeiro.")
-    else:
-        if st.button("🚀 BUSCAR AGENTES", type="primary"):
-            with st.status("Baixando perfis..."):
-                dados = get_r6_team_stats(st.session_state.final_players, season_id, playlist.lower(), fetch_type="agentes")
-                if "erro_critico" not in dados: st.session_state.agent_data = dados["agentes"]
-
-        if st.session_state.agent_data:
-            df_ops = pd.DataFrame(st.session_state.agent_data)
-            
-            if not df_ops.empty:
-                # NOVA REGRA: Acha o operador mais letal (Maior K/D com MAIS de 10 partidas)
-                ops_confiaveis = df_ops[df_ops['Partidas'] > 10]
+            with col_chart1:
+                df_sorted = df_mapas.sort_values("WinRate_Ponderado", ascending=True)
+                mapas = df_sorted["Mapa"].tolist()
+                wrs = df_sorted["WinRate_Ponderado"].tolist()
                 
-                if not ops_confiaveis.empty:
-                    pior_inimigo = ops_confiaveis.loc[ops_confiaveis['KD'].idxmax()]
-                    st.markdown(f"""
-                    <div class="ai-insight">
-                        🤖 <b>Relatório da IA:</b><br>
-                        ⚠️ Cuidado extremo com <b>{pior_inimigo['Jogador']}</b> jogando de <b>{pior_inimigo['Agente']}</b>. 
-                        Ele possui um K/D altíssimo ({pior_inimigo['KD']}) com um volume sólido de jogo ({pior_inimigo['Partidas']} partidas). 
-                        Usem utilitários para isolá-lo e evitem trocas 1v1 diretas contra ele!
-                    </div>
-                    """, unsafe_allow_html=True)
-                else:
-                    # Se ninguém tiver mais de 10 partidas com um boneco, a IA dá um alerta de "Flexibilidade"
-                    st.markdown("""
-                    <div class="ai-insight">
-                        🤖 <b>Relatório da IA:</b><br>
-                        🔍 O time adversário não possui nenhum jogador com grande volume (>10 partidas) focado em um único operador. Eles parecem jogar de forma "flexível" dependendo do mapa. Foquem no jogo coletivo em vez de caçar um alvo específico!
-                    </div>
-                    """, unsafe_allow_html=True)
-            
-            st.divider()
-            p_cols = st.columns(len(st.session_state.final_players))
-            
-            for i, p_cfg in enumerate(st.session_state.final_players):
-                nick = p_cfg['nick']
-                with p_cols[i]:
-                    st.markdown(f'<div class="player-card"><h4 style="margin:0;">{nick}</h4></div>', unsafe_allow_html=True)
-                    
-                    player_ops = df_ops[df_ops["Jogador"] == nick].sort_values("Partidas", ascending=False)
-                    player_ops['is_atk'] = player_ops['Agente'].str.lower().str.replace('ã', 'a').isin(ATACANTES)
-                    
-                    ops_ataque = player_ops[player_ops['is_atk']].head(5)
-                    ops_defesa = player_ops[~player_ops['is_atk']].head(5)
-                    
-                    st.markdown('<div class="role-header-atk">⚔️ ATAQUE</div>', unsafe_allow_html=True)
-                    if not ops_ataque.empty:
-                        for _, op in ops_ataque.iterrows(): st.markdown(render_op_card(op, "atk"), unsafe_allow_html=True)
-                    else: st.write("Sem dados.")
+                colors = []
+                for w in wrs:
+                    if w < 45: colors.append("#e74c3c")
+                    elif w > 55: colors.append("#2ecc71")
+                    else: colors.append("#f39c12")
 
-                    st.markdown('<div class="role-header-def">🗼 DEFESA</div>', unsafe_allow_html=True)
-                    if not ops_defesa.empty:
-                        for _, op in ops_defesa.iterrows(): st.markdown(render_op_card(op, "def"), unsafe_allow_html=True)
-                    else: st.write("Sem dados.")
+                bar_options = {
+                    "title": {
+                        "text": "Win Rate por Mapa",
+                        "textStyle": {"color": "#fff"}
+                    },
+                    "tooltip": {
+                        "trigger": "axis",
+                        "axisPointer": {"type": "shadow"}
+                    },
+                    "grid": {
+                        "left": "3%",
+                        "right": "4%",
+                        "bottom": "3%",
+                        "containLabel": True
+                    },
+                    "xAxis": {
+                        "type": "value",
+                        "max": 100,
+                        "splitLine": {"show": False},
+                        "axisLabel": {"color": "#aaa"}
+                    },
+                    "yAxis": {
+                        "type": "category",
+                        "data": mapas,
+                        "axisLabel": {"color": "#fff"}
+                    },
+                    "series": [
+                        {
+                            "name": "Win Rate (%)",
+                            "type": "bar",
+                            "data": [
+                                {"value": w, "itemStyle": {"color": c}}
+                                for w, c in zip(wrs, colors)
+                            ],
+                            "label": {
+                                "show": True,
+                                "position": "right",
+                                "formatter": "{c}%",
+                                "color": "#fff"
+                            },
+                            "markLine": {
+                                "data": [{"xAxis": 50}],
+                                "lineStyle": {"color": "#fff", "type": "dashed"}
+                            }
+                        }
+                    ]
+                }
+                st_echarts(options=bar_options, height="400px")
+
+            with col_chart2:
+                radar_options = {
+                    "title": {
+                        "text": "Radar de Mapas",
+                        "textStyle": {"color": "#fff"}
+                    },
+                    "tooltip": {},
+                    "radar": {
+                        "indicator": [
+                            {"name": m, "max": 100} for m in df_mapas["Mapa"].tolist()
+                        ],
+                        "splitArea": {"show": False},
+                        "axisName": {"color": "#fff"}
+                    },
+                    "series": [{
+                        "name": "Win Rate",
+                        "type": "radar",
+                        "data": [{
+                            "value": df_mapas["WinRate_Ponderado"].tolist(),
+                            "name": "Win Rate",
+                            "areaStyle": {"color": "rgba(255, 107, 53, 0.4)"},
+                            "lineStyle": {"color": "#FF6B35"},
+                            "itemStyle": {"color": "#FF6B35"}
+                        }]
+                    }]
+                }
+                st_echarts(options=radar_options, height="400px")
+
+            # ── Recomendações de Ban ──
+            st.subheader("🎯 Recomendação de Ban/Pick de Mapa")
+
+            cols_per_row = 4
+            for i in range(0, len(df_mapas), cols_per_row):
+                cols = st.columns(cols_per_row)
+                for j in range(cols_per_row):
+                    if i + j < len(df_mapas):
+                        row = df_mapas.iloc[i + j]
+                        wr = row["WinRate_Ponderado"]
+                        with cols[j]:
+                            if wr >= 55:
+                                st.markdown(
+                                    f'<div class="ban-card">'
+                                    f'<strong>❌ BAN</strong><br>'
+                                    f'{row["Mapa"]}<br>'
+                                    f'{wr}% WR</div>',
+                                    unsafe_allow_html=True
+                                )
+                            elif wr <= 45:
+                                st.markdown(
+                                    f'<div class="pick-card">'
+                                    f'<strong>✅ FORÇAR</strong><br>'
+                                    f'{row["Mapa"]}<br>'
+                                    f'{wr}% WR</div>',
+                                    unsafe_allow_html=True
+                                )
+                            else:
+                                st.info(
+                                    f"⚠️ {row['Mapa']}: {wr}% (Neutro)"
+                                )
+
+            # ── Tabela detalhada ──
+            st.divider()
+            st.subheader("📋 Dados Detalhados por Mapa")
+
+            mapa_selecionado = st.selectbox(
+                "Selecione um mapa para ver detalhes:",
+                df_mapas["Mapa"].tolist()
+            )
+
+            if mapa_selecionado:
+                df_detalhe = analyzer_adv.mapa_por_jogador(
+                    mapa_selecionado
+                )
+                if not df_detalhe.empty:
+                    st.dataframe(
+                        df_detalhe[
+                            ["Jogador", "Partidas", "WinPct"]
+                        ].style.background_gradient(
+                            subset=["WinPct"],
+                            cmap="RdYlGn"
+                        ),
+                        width='stretch',
+                        hide_index=True
+                    )
+        else:
+            st.warning(
+                "Sem dados de mapas suficientes. "
+                "Ajuste o filtro de mínimo de partidas ou confirme a busca de jogadores."
+            )
+    else:
+        st.info(
+            "👈 Clique nos botões acima para iniciar a busca de mapas."
+        )
+
+# ── TAB 2: OPERADORES DO ADVERSÁRIO ──
+with tab2:
+    col_hdr, col_btn1 = st.columns([3, 1])
+    with col_hdr:
+        st.header("🎖️ Ferramenta 2: Operadores do Adversário")
+    with col_btn1:
+        if st.button("🔍 Carregar Operadores", key="btn_ops_adv"):
+            jogadores_adv = get_jogadores_from_state("adv")
+            if jogadores_adv:
+                config = {"nome": "adversario", "jogadores": jogadores_adv}
+                with st.spinner("🔍 Coletando operadores..."):
+                    progress = st.progress(0)
+                    dados = buscar_dados_time(config, fetch_type="agentes", progress_bar=progress)
+                    atualizar_estado_sessao("adversario", dados, "agentes")
+                st.success("✅ Operadores do adversário coletados!")
+            else:
+                st.error("Insira pelo menos um nick.")
+
+    if "dados_adversario" in st.session_state and "agentes" in st.session_state["dados_adversario"] and len(st.session_state["dados_adversario"]["agentes"]) > 0:
+        analyzer_adv = R6Analyzer(st.session_state["dados_adversario"])
+
+        # Top operadores gerais
+        df_ops_all = analyzer_adv.melhores_operadores(
+            min_partidas_op, 50  # Pegamos todos para poder dividir em top_n por role
+        )
+
+        if not df_ops_all.empty:
+            df_ops_all["Role"] = df_ops_all["Agente"].apply(get_role)
+            
+            tab_atk, tab_def = st.tabs(["⚔️ Ataque", "🛡️ Defesa"])
+            
+            # Helper para renderizar a interface de operadores por grupo
+            def render_ops_tab(df_ops, role_name):
+                df_filtered = df_ops[df_ops["Role"] == role_name].head(top_n_ops)
+                
+                if df_filtered.empty:
+                    st.info(f"Sem dados suficientes para {role_name}.")
+                    return
+
+                # ── Métricas ──
+                col1, col2, col3, col4 = st.columns(4)
+                top_op = df_filtered.iloc[0]
+
+                with col1:
+                    st.metric(
+                        "🏆 Melhor",
+                        top_op["Agente"],
+                        f"Score: {top_op['Score']}"
+                    )
+                with col2:
+                    st.metric(
+                        "📈 Maior Win Rate",
+                        df_filtered.loc[
+                            df_filtered["WinRate_Medio"].idxmax(), "Agente"
+                        ],
+                        f"{df_filtered['WinRate_Medio'].max()}%"
+                    )
+                with col3:
+                    st.metric(
+                        "⚔️ Maior KD",
+                        df_filtered.loc[
+                            df_filtered["KD_Medio"].idxmax(), "Agente"
+                        ],
+                        f"{df_filtered['KD_Medio'].max()}"
+                    )
+                with col4:
+                    st.metric(
+                        "👥 Mais Popular",
+                        df_filtered.loc[
+                            df_filtered["Jogadores_Usam"].idxmax(), "Agente"
+                        ],
+                        f"{df_filtered['Jogadores_Usam'].max()} players"
+                    )
+
+                st.divider()
+
+                # ── Gráfico de bolhas: WR x Partidas ──
+                scatter_data = []
+                for _, row in df_filtered.iterrows():
+                    item = {
+                        "name": row["Agente"],
+                        "value": [row["WinRate_Medio"], row["Total_Partidas"], row["KD_Medio"]],
+                        "symbolSize": max(row["KD_Medio"] * 25, 20),
+                        "itemStyle": {"color": "#f39c12"} 
+                    }
+                    if row.get("Icone"):
+                        item["symbol"] = f"image://{row['Icone']}"
+                    scatter_data.append(item)
+
+                scatter_options = {
+                    "title": {
+                        "text": f"{role_name}: Rounds vs Win Rate",
+                        "textStyle": {"color": "#fff"}
+                    },
+                    "tooltip": {
+                        "formatter": "{b}<br/>Win Rate: {c[0]}%<br/>Rounds: {c[1]}<br/>KD: {c[2]}"
+                    },
+                    "xAxis": {
+                        "name": "Win Rate (%)",
+                        "type": "value",
+                        "nameTextStyle": {"color": "#fff"},
+                        "axisLabel": {"color": "#aaa"},
+                        "splitLine": {"lineStyle": {"color": "#444", "type": "dashed"} }
+                    },
+                    "yAxis": {
+                        "name": "Partidas (Rounds)",
+                        "type": "value",
+                        "nameTextStyle": {"color": "#fff"},
+                        "axisLabel": {"color": "#aaa"},
+                        "splitLine": {"lineStyle": {"color": "#444", "type": "dashed"} }
+                    },
+                    "series": [{
+                        "type": "scatter",
+                        "data": scatter_data,
+                        "label": {
+                            "show": True,
+                            "position": "bottom",
+                            "formatter": "{b}",
+                            "color": "#fff"
+                        },
+                        "markLine": {
+                            "data": [{"xAxis": 50}],
+                            "lineStyle": {"color": "#aaa", "type": "dashed"}
+                        }
+                    }]
+                }
+                st_echarts(options=scatter_options, height="500px")
+
+                # ── Ranking visual ──
+                st.subheader(f"🏅 Ranking - {role_name}")
+
+                for idx, (_, op) in enumerate(df_filtered.iterrows()):
+                    with st.container():
+                        cols = st.columns([0.5, 2, 1.5, 1.5, 1.5, 1])
+
+                        with cols[0]:
+                            medals = {0: "🥇", 1: "🥈", 2: "🥉"}
+                            st.markdown(
+                                f"### {medals.get(idx, f'#{idx+1}')}"
+                            )
+
+                        with cols[1]:
+                            if op.get("Icone"):
+                                st.image(
+                                    op["Icone"],
+                                    width=32
+                                )
+                            st.markdown(f"**{op['Agente']}**")
+
+                        with cols[2]:
+                            wr = op['WinRate_Medio']
+                            wr_color = (
+                                "🟢" if wr >= 55
+                                else ("🟡" if wr >= 45 else "🔴")
+                            )
+                            st.metric(
+                                "Win Rate",
+                                f"{wr_color} {wr}%"
+                            )
+
+                        with cols[3]:
+                            kd = op['KD_Medio']
+                            kd_color = (
+                                "🟢" if kd >= 1.2
+                                else ("🟡" if kd >= 0.9 else "🔴")
+                            )
+                            st.metric(
+                                "KD",
+                                f"{kd_color} {kd}"
+                            )
+
+                        with cols[4]:
+                            st.metric(
+                                "Partidas",
+                                op['Total_Partidas']
+                            )
+
+                        with cols[5]:
+                            st.metric(
+                                "Score",
+                                op['Score']
+                            )
+
+            with tab_atk:
+                render_ops_tab(df_ops_all, "Ataque")
+                
+            with tab_def:
+                render_ops_tab(df_ops_all, "Defesa")
+
+
+            # ── Operadores mais perigosos ──
+            st.divider()
+            st.subheader("⚠️ Operadores Mais Perigosos (Threat)")
+
+            df_threat = analyzer_adv.operadores_mais_perigosos(
+                min_partidas_op
+            )
+            if not df_threat.empty:
+                df_top10 = df_threat.head(10)
+                jogadores_threat = df_top10["Jogador"].unique().tolist()
+                agentes_threat = df_top10["Agente"].unique().tolist()
+                
+                series_threat = []
+                for j in jogadores_threat:
+                    data = []
+                    for a in agentes_threat:
+                        val = df_top10[(df_top10["Jogador"] == j) & (df_top10["Agente"] == a)]["Threat"]
+                        data.append(val.iloc[0] if not val.empty else 0)
+                    series_threat.append({
+                        "name": j,
+                        "type": "bar",
+                        "data": data
+                    })
+
+                threat_options = {
+                    "title": {
+                        "text": "Nível de Ameaça por Operador (KD × WinRate)",
+                        "textStyle": {"color": "#fff"}
+                    },
+                    "tooltip": {"trigger": "axis", "axisPointer": {"type": "shadow"}},
+                    "legend": {"data": jogadores_threat, "textStyle": {"color": "#fff"}, "top": 30},
+                    "xAxis": {"type": "category", "data": agentes_threat, "axisLabel": {"color": "#aaa"}},
+                    "yAxis": {"type": "value", "splitLine": {"lineStyle": {"color": "#444", "type": "dashed"}}},
+                    "series": series_threat
+                }
+                st_echarts(options=threat_options, height="450px")
+
+            # ── Detalhe por jogador ──
+            st.divider()
+            st.subheader("🔎 Operadores por Jogador")
+
+            jogadores_list = (
+                analyzer_adv.df_agentes["Jogador"]
+                .unique()
+                .tolist()
+            )
+            jogador_sel = st.selectbox(
+                "Selecione um jogador:",
+                jogadores_list
+            )
+
+            if jogador_sel:
+                df_jogador_ops = analyzer_adv.operadores_por_jogador(
+                    jogador_sel, top_n=8
+                )
+                if not df_jogador_ops.empty:
+                    df_jogador_ops = df_jogador_ops.sort_values("Partidas", ascending=False)
+                    agentes_jog = df_jogador_ops["Agente"].tolist()
+                    partidas_jog = df_jogador_ops["Partidas"].tolist()
+                    
+                    jog_options = {
+                        "title": {
+                            "text": f"Operadores de {jogador_sel}",
+                            "textStyle": {"color": "#fff"}
+                        },
+                        "tooltip": {"trigger": "axis", "axisPointer": {"type": "shadow"}},
+                        "xAxis": {"type": "category", "data": agentes_jog, "axisLabel": {"color": "#aaa"}},
+                        "yAxis": {"type": "value", "splitLine": {"lineStyle": {"color": "#444", "type": "dashed"}}},
+                        "series": [{
+                            "name": "Partidas",
+                            "type": "bar",
+                            "data": partidas_jog,
+                            "itemStyle": {"color": "#2ecc71"}
+                        }]
+                    }
+                    st_echarts(options=jog_options, height="400px")
+        else:
+            st.warning(
+                "Sem dados de operadores suficientes."
+            )
+    else:
+        st.info("👈 Busque os dados do adversário primeiro.")
+
+
+# ── TAB 3: COMPARATIVO ──
+with tab3:
+    col_hdr, col_btn = st.columns([3, 1])
+    with col_hdr:
+        st.header("📊 Comparativo de Times")
+    with col_btn:
+        if st.button("🔍 Carregar Ambos (Mapas)", key="btn_comp"):
+            jogadores_adv = get_jogadores_from_state("adv")
+            jogadores_ali = get_jogadores_from_state("ali")
+            with st.spinner("Buscando mapas (ambos)..."):
+                if jogadores_adv:
+                    dados1 = buscar_dados_time({"nome": "adversario", "jogadores": jogadores_adv}, fetch_type="maps", progress_bar=st.progress(0))
+                    atualizar_estado_sessao("adversario", dados1, "maps")
+                if jogadores_ali:
+                    dados2 = buscar_dados_time({"nome": "aliado", "jogadores": jogadores_ali}, fetch_type="maps", progress_bar=st.progress(0))
+                    atualizar_estado_sessao("aliado", dados2, "maps")
+            st.success("✅ Mapas carregados!")
+
+    has_both = (
+        "dados_adversario" in st.session_state and "mapas" in st.session_state["dados_adversario"] and len(st.session_state["dados_adversario"]["mapas"]) > 0
+        and "dados_aliado" in st.session_state and "mapas" in st.session_state["dados_aliado"] and len(st.session_state["dados_aliado"]["mapas"]) > 0
+    )
+
+    if has_both:
+        analyzer_ali = R6Analyzer(
+            st.session_state["dados_aliado"]
+        )
+        analyzer_adv = R6Analyzer(
+            st.session_state["dados_adversario"]
+        )
+
+        df_comp = analyzer_adv.comparar_mapas(
+            st.session_state["dados_aliado"],
+            st.session_state["dados_adversario"],
+            min_partidas_mapa
+        )
+
+        if not df_comp.empty:
+            st.subheader("🗺️ Comparativo de Mapas")
+
+            mapas_comp = df_comp['Mapa'].tolist()
+            wr_ali = df_comp['WinRate_Ponderado_Aliado'].tolist()
+            wr_adv = df_comp['WinRate_Ponderado_Adversario'].tolist()
+            
+            comp_options = {
+                "title": {
+                    "text": "Win Rate Comparativo por Mapa",
+                    "textStyle": {"color": "#fff"}
+                },
+                "tooltip": {"trigger": "axis", "axisPointer": {"type": "shadow"}},
+                "legend": {"data": ["Meu Time", "Adversário"], "textStyle": {"color": "#fff"}, "top": 30},
+                "xAxis": {"type": "category", "data": mapas_comp, "axisLabel": {"color": "#aaa", "rotate": 45}},
+                "yAxis": {"type": "value", "max": 100, "splitLine": {"lineStyle": {"color": "#444", "type": "dashed"}}},
+                "series": [
+                    {
+                        "name": "Meu Time",
+                        "type": "bar",
+                        "data": wr_ali,
+                        "itemStyle": {"color": "#2ecc71"}
+                    },
+                    {
+                        "name": "Adversário",
+                        "type": "bar",
+                        "data": wr_adv,
+                        "itemStyle": {"color": "#e74c3c"}
+                    }
+                ]
+            }
+            st_echarts(options=comp_options, height="450px")
+
+            # Tabela de recomendações
+            st.subheader("🎯 Recomendações de Pick/Ban")
+
+            for _, row in df_comp.iterrows():
+                cols = st.columns([2, 1.5, 1.5, 1, 1.5])
+                with cols[0]:
+                    st.write(f"**{row['Mapa']}**")
+                with cols[1]:
+                    wr_ali = row.get(
+                        'WinRate_Ponderado_Aliado', 0
+                    )
+                    st.write(f"🟢 Nós: {wr_ali}%")
+                with cols[2]:
+                    wr_adv = row.get(
+                        'WinRate_Ponderado_Adversario', 0
+                    )
+                    st.write(f"🔴 Eles: {wr_adv}%")
+                with cols[3]:
+                    vantagem = row.get('Vantagem', 0)
+                    cor = (
+                        "🟢" if vantagem > 0
+                        else "🔴"
+                    )
+                    st.write(
+                        f"{cor} {'+' if vantagem > 0 else ''}"
+                        f"{vantagem}"
+                    )
+                with cols[4]:
+                    st.write(
+                        row.get('Recomendacao', '⚠️')
+                    )
+        else:
+            st.warning("Dados insuficientes para comparação.")
+    else:
+        st.info(
+            "👈 Busque os dados de ambos os times "
+            "para ver o comparativo."
+        )
+
+
+# ── TAB 4: FASE DOS JOGADORES ──
+with tab4:
+    col_hdr, col_btn1, col_btn2 = st.columns([2, 1, 1])
+    with col_hdr:
+        st.header("🔥 Momento Atual dos Jogadores")
+    with col_btn1:
+        if st.button("🔍 Carregar Fase (Adv)", key="btn_fase_adv"):
+            jogadores_adv = get_jogadores_from_state("adv")
+            if jogadores_adv:
+                with st.spinner("Buscando fase do adversário..."):
+                    dados = buscar_dados_time({"nome": "adversario", "jogadores": jogadores_adv}, fetch_type="fase", progress_bar=st.progress(0))
+                    atualizar_estado_sessao("adversario", dados, "fase")
+                st.success("✅ Fase do adversário carregada!")
+    with col_btn2:
+        if st.button("🔍 Carregar Fase (Nós)", key="btn_fase_ali"):
+            jogadores_ali = get_jogadores_from_state("ali")
+            if jogadores_ali:
+                with st.spinner("Buscando fase do meu time..."):
+                    dados = buscar_dados_time({"nome": "aliado", "jogadores": jogadores_ali}, fetch_type="fase", progress_bar=st.progress(0))
+                    atualizar_estado_sessao("aliado", dados, "fase")
+                st.success("✅ Fase do aliado carregada!")
+
+    col_fase1, col_fase2 = st.columns(2)
+
+    # Fase do adversário
+    with col_fase1:
+        st.subheader("🔴 Adversário")
+        if "dados_adversario" in st.session_state and "fase" in st.session_state["dados_adversario"] and len(st.session_state["dados_adversario"]["fase"]) > 0:
+            analyzer_adv = R6Analyzer(
+                st.session_state["dados_adversario"]
+            )
+            fase_adv = analyzer_adv.analise_fase()
+
+            for jogador in fase_adv:
+                with st.container():
+                    c1, c2, c3 = st.columns([2, 1.5, 1.5])
+                    with c1:
+                        st.markdown(
+                            f"**{jogador['Jogador']}**"
+                        )
+                        st.caption(jogador['Historico'])
+                    with c2:
+                        st.write(jogador['Momento'])
+                    with c3:
+                        st.write(jogador['Streak'])
+                    st.divider()
+        else:
+            st.info("Sem dados.")
+
+    # Fase do meu time
+    with col_fase2:
+        st.subheader("🟢 Meu Time")
+        if "dados_aliado" in st.session_state and "fase" in st.session_state["dados_aliado"] and len(st.session_state["dados_aliado"]["fase"]) > 0:
+            analyzer_ali = R6Analyzer(
+                st.session_state["dados_aliado"]
+            )
+            fase_ali = analyzer_ali.analise_fase()
+
+            for jogador in fase_ali:
+                with st.container():
+                    c1, c2, c3 = st.columns([2, 1.5, 1.5])
+                    with c1:
+                        st.markdown(
+                            f"**{jogador['Jogador']}**"
+                        )
+                        st.caption(jogador['Historico'])
+                    with c2:
+                        st.write(jogador['Momento'])
+                    with c3:
+                        st.write(jogador['Streak'])
+                    st.divider()
+        else:
+            st.info("Sem dados.")
+
+
+# ══════════════════════════════════════════════
+#  FOOTER
+# ══════════════════════════════════════════════
+
+st.divider()
+st.caption(
+    "🎯 R6 Team Analyzer | "
+    "Dados via R6Tracker | "
+    f"Atualizado: {datetime.now().strftime('%d/%m/%Y %H:%M')}"
+)

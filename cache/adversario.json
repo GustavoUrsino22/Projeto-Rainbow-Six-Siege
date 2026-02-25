@@ -1,0 +1,2816 @@
+{
+  "timestamp": "2026-02-24T21:41:32.312168",
+  "dados": {
+    "mapas": [
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Chalet",
+        "WinPct": 39.1,
+        "Partidas": 23
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Clubhouse",
+        "WinPct": 50.0,
+        "Partidas": 20
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Consulate",
+        "WinPct": 60.0,
+        "Partidas": 20
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Fortress",
+        "WinPct": 47.4,
+        "Partidas": 19
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Kafe Dostoyevsky",
+        "WinPct": 50.0,
+        "Partidas": 18
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Villa",
+        "WinPct": 58.8,
+        "Partidas": 17
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Border",
+        "WinPct": 37.5,
+        "Partidas": 16
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Nighthaven Labs",
+        "WinPct": 50.0,
+        "Partidas": 16
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Oregon",
+        "WinPct": 37.5,
+        "Partidas": 16
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Kanal",
+        "WinPct": 53.8,
+        "Partidas": 13
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Outback",
+        "WinPct": 53.8,
+        "Partidas": 13
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Skyscraper",
+        "WinPct": 69.2,
+        "Partidas": 13
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Coastline",
+        "WinPct": 25.0,
+        "Partidas": 12
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Bank",
+        "WinPct": 45.5,
+        "Partidas": 11
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Lair",
+        "WinPct": 57.1,
+        "Partidas": 7
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Mapa": "Theme Park",
+        "WinPct": 40.0,
+        "Partidas": 5
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Chalet",
+        "WinPct": 46.4,
+        "Partidas": 28
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Oregon",
+        "WinPct": 37.0,
+        "Partidas": 27
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Clubhouse",
+        "WinPct": 56.0,
+        "Partidas": 25
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Fortress",
+        "WinPct": 58.3,
+        "Partidas": 24
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Consulate",
+        "WinPct": 59.1,
+        "Partidas": 22
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Villa",
+        "WinPct": 57.1,
+        "Partidas": 21
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Coastline",
+        "WinPct": 30.0,
+        "Partidas": 20
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Border",
+        "WinPct": 47.1,
+        "Partidas": 17
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Kafe Dostoyevsky",
+        "WinPct": 37.5,
+        "Partidas": 16
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Kanal",
+        "WinPct": 60.0,
+        "Partidas": 15
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Nighthaven Labs",
+        "WinPct": 40.0,
+        "Partidas": 15
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Skyscraper",
+        "WinPct": 78.6,
+        "Partidas": 14
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Outback",
+        "WinPct": 53.8,
+        "Partidas": 13
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Bank",
+        "WinPct": 33.3,
+        "Partidas": 12
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Lair",
+        "WinPct": 66.7,
+        "Partidas": 6
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Mapa": "Theme Park",
+        "WinPct": 66.7,
+        "Partidas": 3
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Clubhouse",
+        "WinPct": 53.8,
+        "Partidas": 13
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Fortress",
+        "WinPct": 53.8,
+        "Partidas": 13
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Chalet",
+        "WinPct": 27.3,
+        "Partidas": 11
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Consulate",
+        "WinPct": 63.6,
+        "Partidas": 11
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Kanal",
+        "WinPct": 40.0,
+        "Partidas": 10
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Nighthaven Labs",
+        "WinPct": 60.0,
+        "Partidas": 10
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Border",
+        "WinPct": 44.4,
+        "Partidas": 9
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Kafe Dostoyevsky",
+        "WinPct": 44.4,
+        "Partidas": 9
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Oregon",
+        "WinPct": 33.3,
+        "Partidas": 9
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Villa",
+        "WinPct": 55.6,
+        "Partidas": 9
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Outback",
+        "WinPct": 25.0,
+        "Partidas": 8
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Skyscraper",
+        "WinPct": 85.7,
+        "Partidas": 7
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Coastline",
+        "WinPct": 16.7,
+        "Partidas": 6
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Lair",
+        "WinPct": 60.0,
+        "Partidas": 5
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Theme Park",
+        "WinPct": 40.0,
+        "Partidas": 5
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Mapa": "Bank",
+        "WinPct": 33.3,
+        "Partidas": 3
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Nighthaven Labs",
+        "WinPct": 50.0,
+        "Partidas": 10
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Chalet",
+        "WinPct": 22.2,
+        "Partidas": 9
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Consulate",
+        "WinPct": 77.8,
+        "Partidas": 9
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Villa",
+        "WinPct": 55.6,
+        "Partidas": 9
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Fortress",
+        "WinPct": 62.5,
+        "Partidas": 8
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Border",
+        "WinPct": 28.6,
+        "Partidas": 7
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Clubhouse",
+        "WinPct": 28.6,
+        "Partidas": 7
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Kafe Dostoyevsky",
+        "WinPct": 60.0,
+        "Partidas": 5
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Oregon",
+        "WinPct": 20.0,
+        "Partidas": 5
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Skyscraper",
+        "WinPct": 100.0,
+        "Partidas": 5
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Lair",
+        "WinPct": 75.0,
+        "Partidas": 4
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Outback",
+        "WinPct": 50.0,
+        "Partidas": 4
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Bank",
+        "WinPct": 33.3,
+        "Partidas": 3
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Coastline",
+        "WinPct": 33.3,
+        "Partidas": 3
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Kanal",
+        "WinPct": 33.3,
+        "Partidas": 3
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Mapa": "Theme Park",
+        "WinPct": 33.3,
+        "Partidas": 3
+      }
+    ],
+    "agentes": [
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Striker",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fstriker.png/image.png",
+        "Partidas": 216,
+        "WinPct": 44.4,
+        "KD": 1.35
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Tubarão",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ftubarao.png/image.png",
+        "Partidas": 166,
+        "WinPct": 54.8,
+        "KD": 1.6
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Thorn",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fthorn.png/image.png",
+        "Partidas": 151,
+        "WinPct": 55.0,
+        "KD": 1.72
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Denari",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fdenari.png/image.png",
+        "Partidas": 75,
+        "WinPct": 44.0,
+        "KD": 0.96
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Blitz",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fblitz.png/image.png",
+        "Partidas": 58,
+        "WinPct": 41.4,
+        "KD": 0.67
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Ash",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fash.png/image.png",
+        "Partidas": 47,
+        "WinPct": 40.4,
+        "KD": 1.83
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Lion",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Flion.png/image.png",
+        "Partidas": 40,
+        "WinPct": 40.0,
+        "KD": 1.7
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Thermite",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fthermite.png/image.png",
+        "Partidas": 38,
+        "WinPct": 47.4,
+        "KD": 1.3
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Blackbeard",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fblackbeard.png/image.png",
+        "Partidas": 37,
+        "WinPct": 51.4,
+        "KD": 0.52
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Azami",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fazami.png/image.png",
+        "Partidas": 30,
+        "WinPct": 50.0,
+        "KD": 0.61
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Hibana",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fhibana.png/image.png",
+        "Partidas": 30,
+        "WinPct": 40.0,
+        "KD": 0.86
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Ace",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Face.png/image.png",
+        "Partidas": 29,
+        "WinPct": 55.2,
+        "KD": 2.21
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Bandit",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fbandit.png/image.png",
+        "Partidas": 29,
+        "WinPct": 48.3,
+        "KD": 0.81
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Maverick",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmaverick.png/image.png",
+        "Partidas": 28,
+        "WinPct": 42.9,
+        "KD": 1.74
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Jackal",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fjackal.png/image.png",
+        "Partidas": 28,
+        "WinPct": 35.7,
+        "KD": 1.63
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Fenrir",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffenrir.png/image.png",
+        "Partidas": 28,
+        "WinPct": 60.7,
+        "KD": 1.39
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Frost",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffrost.png/image.png",
+        "Partidas": 27,
+        "WinPct": 66.7,
+        "KD": 1.56
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Valkyrie",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fvalkyrie.png/image.png",
+        "Partidas": 26,
+        "WinPct": 73.1,
+        "KD": 1.53
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Rauora",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Frauora.png/image.png",
+        "Partidas": 25,
+        "WinPct": 48.0,
+        "KD": 1.29
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Mira",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmira.png/image.png",
+        "Partidas": 23,
+        "WinPct": 47.8,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Nomad",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fnomad.png/image.png",
+        "Partidas": 22,
+        "WinPct": 40.9,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Smoke",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsmoke.png/image.png",
+        "Partidas": 22,
+        "WinPct": 45.5,
+        "KD": 0.77
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Lesion",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Flesion.png/image.png",
+        "Partidas": 21,
+        "WinPct": 66.7,
+        "KD": 1.75
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Castle",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fcastle.png/image.png",
+        "Partidas": 19,
+        "WinPct": 42.1,
+        "KD": 1.54
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Montagne",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmontagne.png/image.png",
+        "Partidas": 18,
+        "WinPct": 50.0,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Ram",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fram.png/image.png",
+        "Partidas": 15,
+        "WinPct": 60.0,
+        "KD": 2.71
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Aruni",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Faruni.png/image.png",
+        "Partidas": 11,
+        "WinPct": 27.3,
+        "KD": 0.7
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Echo",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fecho.png/image.png",
+        "Partidas": 11,
+        "WinPct": 63.6,
+        "KD": 0.83
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Pulse",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fpulse.png/image.png",
+        "Partidas": 11,
+        "WinPct": 54.5,
+        "KD": 1.43
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Melusi",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmelusi.png/image.png",
+        "Partidas": 10,
+        "WinPct": 40.0,
+        "KD": 0.88
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Jäger",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fjager.png/image.png",
+        "Partidas": 10,
+        "WinPct": 40.0,
+        "KD": 1.17
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Mute",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmute.png/image.png",
+        "Partidas": 9,
+        "WinPct": 55.6,
+        "KD": 0.75
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Kaid",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fkaid.png/image.png",
+        "Partidas": 9,
+        "WinPct": 55.6,
+        "KD": 0.86
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Gridlock",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fgridlock.png/image.png",
+        "Partidas": 8,
+        "WinPct": 37.5,
+        "KD": 0.83
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Clash",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fclash.png/image.png",
+        "Partidas": 8,
+        "WinPct": 12.5,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Buck",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fbuck.png/image.png",
+        "Partidas": 8,
+        "WinPct": 75.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Glaz",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fglaz.png/image.png",
+        "Partidas": 7,
+        "WinPct": 57.1,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Thatcher",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fthatcher.png/image.png",
+        "Partidas": 7,
+        "WinPct": 57.1,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Deimos",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fdeimos.png/image.png",
+        "Partidas": 7,
+        "WinPct": 42.9,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Vigil",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fvigil.png/image.png",
+        "Partidas": 6,
+        "WinPct": 66.7,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Fuze",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffuze.png/image.png",
+        "Partidas": 6,
+        "WinPct": 33.3,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Kapkan",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fkapkan.png/image.png",
+        "Partidas": 5,
+        "WinPct": 60.0,
+        "KD": 3.5
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Grim",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fgrim.png/image.png",
+        "Partidas": 5,
+        "WinPct": 40.0,
+        "KD": 1.67
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Caveira",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fcaveira.png/image.png",
+        "Partidas": 4,
+        "WinPct": 50.0,
+        "KD": 1.67
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Ela",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fela.png/image.png",
+        "Partidas": 4,
+        "WinPct": 75.0,
+        "KD": 1.33
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Dokkaebi",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fdokkaebi.png/image.png",
+        "Partidas": 4,
+        "WinPct": 25.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Ying",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fying.png/image.png",
+        "Partidas": 4,
+        "WinPct": 50.0,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Flores",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fflores.png/image.png",
+        "Partidas": 4,
+        "WinPct": 50.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Brava",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fbrava.png/image.png",
+        "Partidas": 3,
+        "WinPct": 33.3,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Thunderbird",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fthunderbird.png/image.png",
+        "Partidas": 3,
+        "WinPct": 33.3,
+        "KD": 0.67
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Sens",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsens.png/image.png",
+        "Partidas": 2,
+        "WinPct": 0.0,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Finka",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffinka.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 3.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Sentry",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsentry.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 6.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Sledge",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsledge.png/image.png",
+        "Partidas": 2,
+        "WinPct": 0.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Skopós",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fskopos.png/image.png",
+        "Partidas": 2,
+        "WinPct": 0.0,
+        "KD": 1.5
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Capitão",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fcapitao.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Osa",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fosa.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "IQ",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fiq.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 3.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Iana",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fiana.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Warden",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fwarden.png/image.png",
+        "Partidas": 1,
+        "WinPct": 0.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Nøkk",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fnokk.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Tachanka",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ftachanka.png/image.png",
+        "Partidas": 1,
+        "WinPct": 0.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Twitch",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ftwitch.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Rook",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Frook.png/image.png",
+        "Partidas": 1,
+        "WinPct": 0.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Alibi",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Falibi.png/image.png",
+        "Partidas": 1,
+        "WinPct": 0.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_kaka0017",
+        "Plataforma": "PSN",
+        "Agente": "Mozzie",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmozzie.png/image.png",
+        "Partidas": 1,
+        "WinPct": 0.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Thorn",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fthorn.png/image.png",
+        "Partidas": 156,
+        "WinPct": 48.1,
+        "KD": 0.7
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Flores",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fflores.png/image.png",
+        "Partidas": 126,
+        "WinPct": 45.2,
+        "KD": 0.57
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Striker",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fstriker.png/image.png",
+        "Partidas": 126,
+        "WinPct": 47.6,
+        "KD": 0.92
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Aruni",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Faruni.png/image.png",
+        "Partidas": 102,
+        "WinPct": 57.8,
+        "KD": 0.79
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Mute",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmute.png/image.png",
+        "Partidas": 100,
+        "WinPct": 63.0,
+        "KD": 0.61
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Kaid",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fkaid.png/image.png",
+        "Partidas": 88,
+        "WinPct": 44.3,
+        "KD": 0.69
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Dokkaebi",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fdokkaebi.png/image.png",
+        "Partidas": 78,
+        "WinPct": 32.1,
+        "KD": 0.66
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Iana",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fiana.png/image.png",
+        "Partidas": 76,
+        "WinPct": 47.4,
+        "KD": 0.61
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Nomad",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fnomad.png/image.png",
+        "Partidas": 69,
+        "WinPct": 52.2,
+        "KD": 0.58
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Echo",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fecho.png/image.png",
+        "Partidas": 61,
+        "WinPct": 52.5,
+        "KD": 0.41
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Fuze",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffuze.png/image.png",
+        "Partidas": 56,
+        "WinPct": 46.4,
+        "KD": 0.67
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Tubarão",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ftubarao.png/image.png",
+        "Partidas": 49,
+        "WinPct": 49.0,
+        "KD": 0.79
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Brava",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fbrava.png/image.png",
+        "Partidas": 49,
+        "WinPct": 55.1,
+        "KD": 0.69
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Vigil",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fvigil.png/image.png",
+        "Partidas": 48,
+        "WinPct": 68.8,
+        "KD": 1.25
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Hibana",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fhibana.png/image.png",
+        "Partidas": 32,
+        "WinPct": 43.8,
+        "KD": 0.27
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Mozzie",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmozzie.png/image.png",
+        "Partidas": 30,
+        "WinPct": 46.7,
+        "KD": 0.4
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Lion",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Flion.png/image.png",
+        "Partidas": 30,
+        "WinPct": 40.0,
+        "KD": 0.39
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Fenrir",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffenrir.png/image.png",
+        "Partidas": 28,
+        "WinPct": 50.0,
+        "KD": 0.61
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Sledge",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsledge.png/image.png",
+        "Partidas": 28,
+        "WinPct": 39.3,
+        "KD": 0.32
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Caveira",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fcaveira.png/image.png",
+        "Partidas": 26,
+        "WinPct": 30.8,
+        "KD": 0.55
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Nøkk",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fnokk.png/image.png",
+        "Partidas": 24,
+        "WinPct": 54.2,
+        "KD": 0.42
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Lesion",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Flesion.png/image.png",
+        "Partidas": 20,
+        "WinPct": 75.0,
+        "KD": 0.58
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Blackbeard",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fblackbeard.png/image.png",
+        "Partidas": 18,
+        "WinPct": 55.6,
+        "KD": 0.55
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Deimos",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fdeimos.png/image.png",
+        "Partidas": 18,
+        "WinPct": 50.0,
+        "KD": 0.46
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Rook",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Frook.png/image.png",
+        "Partidas": 17,
+        "WinPct": 47.1,
+        "KD": 0.33
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Castle",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fcastle.png/image.png",
+        "Partidas": 15,
+        "WinPct": 53.3,
+        "KD": 0.8
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Mira",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmira.png/image.png",
+        "Partidas": 14,
+        "WinPct": 71.4,
+        "KD": 0.67
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Thatcher",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fthatcher.png/image.png",
+        "Partidas": 14,
+        "WinPct": 42.9,
+        "KD": 0.58
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Alibi",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Falibi.png/image.png",
+        "Partidas": 12,
+        "WinPct": 58.3,
+        "KD": 0.86
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Thermite",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fthermite.png/image.png",
+        "Partidas": 12,
+        "WinPct": 66.7,
+        "KD": 0.43
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Frost",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffrost.png/image.png",
+        "Partidas": 12,
+        "WinPct": 50.0,
+        "KD": 0.3
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Ela",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fela.png/image.png",
+        "Partidas": 11,
+        "WinPct": 36.4,
+        "KD": 0.67
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Pulse",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fpulse.png/image.png",
+        "Partidas": 10,
+        "WinPct": 50.0,
+        "KD": 0.67
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Kapkan",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fkapkan.png/image.png",
+        "Partidas": 9,
+        "WinPct": 55.6,
+        "KD": 0.67
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Bandit",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fbandit.png/image.png",
+        "Partidas": 9,
+        "WinPct": 44.4,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Twitch",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ftwitch.png/image.png",
+        "Partidas": 9,
+        "WinPct": 11.1,
+        "KD": 0.44
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Buck",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fbuck.png/image.png",
+        "Partidas": 8,
+        "WinPct": 62.5,
+        "KD": 0.14
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Goyo",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fgoyo.png/image.png",
+        "Partidas": 8,
+        "WinPct": 75.0,
+        "KD": 0.57
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Ace",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Face.png/image.png",
+        "Partidas": 7,
+        "WinPct": 57.1,
+        "KD": 0.83
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Gridlock",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fgridlock.png/image.png",
+        "Partidas": 4,
+        "WinPct": 50.0,
+        "KD": 0.67
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Wamai",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fwamai.png/image.png",
+        "Partidas": 4,
+        "WinPct": 50.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Ying",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fying.png/image.png",
+        "Partidas": 4,
+        "WinPct": 50.0,
+        "KD": 0.25
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "IQ",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fiq.png/image.png",
+        "Partidas": 4,
+        "WinPct": 75.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Jäger",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fjager.png/image.png",
+        "Partidas": 4,
+        "WinPct": 75.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Zofia",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fzofia.png/image.png",
+        "Partidas": 4,
+        "WinPct": 100.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Jackal",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fjackal.png/image.png",
+        "Partidas": 3,
+        "WinPct": 66.7,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Amaru",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Famaru.png/image.png",
+        "Partidas": 3,
+        "WinPct": 0.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Azami",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fazami.png/image.png",
+        "Partidas": 3,
+        "WinPct": 66.7,
+        "KD": 1.5
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Finka",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffinka.png/image.png",
+        "Partidas": 3,
+        "WinPct": 100.0,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Zero",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fzero.png/image.png",
+        "Partidas": 3,
+        "WinPct": 33.3,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Montagne",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmontagne.png/image.png",
+        "Partidas": 3,
+        "WinPct": 33.3,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Smoke",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsmoke.png/image.png",
+        "Partidas": 2,
+        "WinPct": 0.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Sentry",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsentry.png/image.png",
+        "Partidas": 2,
+        "WinPct": 0.0,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Ram",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fram.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Ash",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fash.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Valkyrie",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fvalkyrie.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Blitz",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fblitz.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Melusi",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmelusi.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Glaz",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fglaz.png/image.png",
+        "Partidas": 1,
+        "WinPct": 0.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Oryx",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Foryx.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Capitão",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fcapitao.png/image.png",
+        "Partidas": 1,
+        "WinPct": 0.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Clash",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fclash.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Solis",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsolis.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Thunderbird",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fthunderbird.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Osa",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fosa.png/image.png",
+        "Partidas": 1,
+        "WinPct": 0.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Warden",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fwarden.png/image.png",
+        "Partidas": 1,
+        "WinPct": 0.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB_FaderBR",
+        "Plataforma": "PSN",
+        "Agente": "Rauora",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Frauora.png/image.png",
+        "Partidas": 1,
+        "WinPct": 0.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Finka",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffinka.png/image.png",
+        "Partidas": 70,
+        "WinPct": 48.6,
+        "KD": 1.29
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Kapkan",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fkapkan.png/image.png",
+        "Partidas": 52,
+        "WinPct": 53.8,
+        "KD": 1.72
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Denari",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fdenari.png/image.png",
+        "Partidas": 45,
+        "WinPct": 60.0,
+        "KD": 0.47
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Alibi",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Falibi.png/image.png",
+        "Partidas": 45,
+        "WinPct": 48.9,
+        "KD": 1.17
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Ying",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fying.png/image.png",
+        "Partidas": 42,
+        "WinPct": 38.1,
+        "KD": 0.77
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Valkyrie",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fvalkyrie.png/image.png",
+        "Partidas": 37,
+        "WinPct": 64.9,
+        "KD": 1.67
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Buck",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fbuck.png/image.png",
+        "Partidas": 34,
+        "WinPct": 38.2,
+        "KD": 0.65
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Lesion",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Flesion.png/image.png",
+        "Partidas": 32,
+        "WinPct": 56.2,
+        "KD": 1.6
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Brava",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fbrava.png/image.png",
+        "Partidas": 31,
+        "WinPct": 41.9,
+        "KD": 1.81
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Dokkaebi",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fdokkaebi.png/image.png",
+        "Partidas": 29,
+        "WinPct": 55.2,
+        "KD": 1.18
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Mute",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmute.png/image.png",
+        "Partidas": 19,
+        "WinPct": 31.6,
+        "KD": 0.44
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Nomad",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fnomad.png/image.png",
+        "Partidas": 18,
+        "WinPct": 44.4,
+        "KD": 0.64
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Capitão",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fcapitao.png/image.png",
+        "Partidas": 16,
+        "WinPct": 56.2,
+        "KD": 1.44
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Gridlock",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fgridlock.png/image.png",
+        "Partidas": 16,
+        "WinPct": 37.5,
+        "KD": 1.27
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Smoke",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsmoke.png/image.png",
+        "Partidas": 15,
+        "WinPct": 46.7,
+        "KD": 0.75
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Thermite",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fthermite.png/image.png",
+        "Partidas": 15,
+        "WinPct": 46.7,
+        "KD": 0.44
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Mozzie",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmozzie.png/image.png",
+        "Partidas": 14,
+        "WinPct": 78.6,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Thorn",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fthorn.png/image.png",
+        "Partidas": 12,
+        "WinPct": 58.3,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Blackbeard",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fblackbeard.png/image.png",
+        "Partidas": 12,
+        "WinPct": 50.0,
+        "KD": 0.36
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Bandit",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fbandit.png/image.png",
+        "Partidas": 11,
+        "WinPct": 63.6,
+        "KD": 1.12
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Kaid",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fkaid.png/image.png",
+        "Partidas": 10,
+        "WinPct": 50.0,
+        "KD": 0.8
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Skopós",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fskopos.png/image.png",
+        "Partidas": 10,
+        "WinPct": 40.0,
+        "KD": 0.33
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Aruni",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Faruni.png/image.png",
+        "Partidas": 10,
+        "WinPct": 60.0,
+        "KD": 0.57
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Sledge",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsledge.png/image.png",
+        "Partidas": 10,
+        "WinPct": 40.0,
+        "KD": 1.25
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Castle",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fcastle.png/image.png",
+        "Partidas": 9,
+        "WinPct": 33.3,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Maverick",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmaverick.png/image.png",
+        "Partidas": 9,
+        "WinPct": 55.6,
+        "KD": 1.2
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Fuze",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffuze.png/image.png",
+        "Partidas": 9,
+        "WinPct": 44.4,
+        "KD": 3.33
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Zero",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fzero.png/image.png",
+        "Partidas": 9,
+        "WinPct": 44.4,
+        "KD": 0.67
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Flores",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fflores.png/image.png",
+        "Partidas": 9,
+        "WinPct": 22.2,
+        "KD": 0.71
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Azami",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fazami.png/image.png",
+        "Partidas": 8,
+        "WinPct": 62.5,
+        "KD": 1.75
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Vigil",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fvigil.png/image.png",
+        "Partidas": 8,
+        "WinPct": 37.5,
+        "KD": 0.38
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Striker",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fstriker.png/image.png",
+        "Partidas": 7,
+        "WinPct": 14.3,
+        "KD": 0.14
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Blitz",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fblitz.png/image.png",
+        "Partidas": 7,
+        "WinPct": 14.3,
+        "KD": 0.17
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Frost",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffrost.png/image.png",
+        "Partidas": 7,
+        "WinPct": 57.1,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Fenrir",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffenrir.png/image.png",
+        "Partidas": 7,
+        "WinPct": 28.6,
+        "KD": 1.2
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Rauora",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Frauora.png/image.png",
+        "Partidas": 7,
+        "WinPct": 42.9,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Lion",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Flion.png/image.png",
+        "Partidas": 6,
+        "WinPct": 66.7,
+        "KD": 1.25
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Mira",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmira.png/image.png",
+        "Partidas": 6,
+        "WinPct": 83.3,
+        "KD": 0.6
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Jackal",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fjackal.png/image.png",
+        "Partidas": 6,
+        "WinPct": 50.0,
+        "KD": 2.33
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Montagne",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmontagne.png/image.png",
+        "Partidas": 5,
+        "WinPct": 40.0,
+        "KD": 0.25
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Melusi",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmelusi.png/image.png",
+        "Partidas": 5,
+        "WinPct": 40.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Ela",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fela.png/image.png",
+        "Partidas": 5,
+        "WinPct": 40.0,
+        "KD": 0.25
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Clash",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fclash.png/image.png",
+        "Partidas": 5,
+        "WinPct": 20.0,
+        "KD": 0.2
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Tubarão",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ftubarao.png/image.png",
+        "Partidas": 4,
+        "WinPct": 25.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Wamai",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fwamai.png/image.png",
+        "Partidas": 4,
+        "WinPct": 25.0,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Sens",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsens.png/image.png",
+        "Partidas": 3,
+        "WinPct": 0.0,
+        "KD": 0.67
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Amaru",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Famaru.png/image.png",
+        "Partidas": 3,
+        "WinPct": 33.3,
+        "KD": 0.67
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Glaz",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fglaz.png/image.png",
+        "Partidas": 3,
+        "WinPct": 66.7,
+        "KD": 1.5
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Pulse",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fpulse.png/image.png",
+        "Partidas": 3,
+        "WinPct": 33.3,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Oryx",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Foryx.png/image.png",
+        "Partidas": 3,
+        "WinPct": 100.0,
+        "KD": 5.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Hibana",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fhibana.png/image.png",
+        "Partidas": 3,
+        "WinPct": 0.0,
+        "KD": 0.33
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Twitch",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ftwitch.png/image.png",
+        "Partidas": 3,
+        "WinPct": 66.7,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Ash",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fash.png/image.png",
+        "Partidas": 3,
+        "WinPct": 66.7,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Grim",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fgrim.png/image.png",
+        "Partidas": 3,
+        "WinPct": 0.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Zofia",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fzofia.png/image.png",
+        "Partidas": 3,
+        "WinPct": 0.0,
+        "KD": 1.5
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Nøkk",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fnokk.png/image.png",
+        "Partidas": 3,
+        "WinPct": 66.7,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Caveira",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fcaveira.png/image.png",
+        "Partidas": 3,
+        "WinPct": 33.3,
+        "KD": 0.67
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Ram",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fram.png/image.png",
+        "Partidas": 3,
+        "WinPct": 66.7,
+        "KD": 1.5
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "IQ",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fiq.png/image.png",
+        "Partidas": 3,
+        "WinPct": 66.7,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Goyo",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fgoyo.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Echo",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fecho.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Deimos",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fdeimos.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Warden",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fwarden.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Jäger",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fjager.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Ace",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Face.png/image.png",
+        "Partidas": 2,
+        "WinPct": 0.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Thatcher",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fthatcher.png/image.png",
+        "Partidas": 1,
+        "WinPct": 0.0,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Doc",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fdoc.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Tachanka",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ftachanka.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Sentry",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsentry.png/image.png",
+        "Partidas": 1,
+        "WinPct": 0.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Maestro",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmaestro.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Solis",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsolis.png/image.png",
+        "Partidas": 1,
+        "WinPct": 0.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "SEB-NBK44",
+        "Plataforma": "PSN",
+        "Agente": "Kali",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fkali.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Ash",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fash.png/image.png",
+        "Partidas": 80,
+        "WinPct": 41.2,
+        "KD": 1.5
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Solis",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsolis.png/image.png",
+        "Partidas": 47,
+        "WinPct": 51.1,
+        "KD": 1.74
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Dokkaebi",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fdokkaebi.png/image.png",
+        "Partidas": 33,
+        "WinPct": 45.5,
+        "KD": 1.15
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Lesion",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Flesion.png/image.png",
+        "Partidas": 29,
+        "WinPct": 41.4,
+        "KD": 1.48
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Blackbeard",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fblackbeard.png/image.png",
+        "Partidas": 25,
+        "WinPct": 52.0,
+        "KD": 1.53
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Thorn",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fthorn.png/image.png",
+        "Partidas": 25,
+        "WinPct": 64.0,
+        "KD": 2.27
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Twitch",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ftwitch.png/image.png",
+        "Partidas": 23,
+        "WinPct": 60.9,
+        "KD": 1.56
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Grim",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fgrim.png/image.png",
+        "Partidas": 19,
+        "WinPct": 68.4,
+        "KD": 2.42
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Fenrir",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffenrir.png/image.png",
+        "Partidas": 18,
+        "WinPct": 55.6,
+        "KD": 1.14
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Valkyrie",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fvalkyrie.png/image.png",
+        "Partidas": 18,
+        "WinPct": 50.0,
+        "KD": 1.12
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Azami",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fazami.png/image.png",
+        "Partidas": 17,
+        "WinPct": 47.1,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Tubarão",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ftubarao.png/image.png",
+        "Partidas": 16,
+        "WinPct": 50.0,
+        "KD": 1.55
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Doc",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fdoc.png/image.png",
+        "Partidas": 15,
+        "WinPct": 80.0,
+        "KD": 1.22
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Aruni",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Faruni.png/image.png",
+        "Partidas": 12,
+        "WinPct": 66.7,
+        "KD": 1.11
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Frost",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffrost.png/image.png",
+        "Partidas": 12,
+        "WinPct": 50.0,
+        "KD": 1.22
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Nomad",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fnomad.png/image.png",
+        "Partidas": 12,
+        "WinPct": 58.3,
+        "KD": 1.38
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Blitz",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fblitz.png/image.png",
+        "Partidas": 12,
+        "WinPct": 58.3,
+        "KD": 0.89
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Vigil",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fvigil.png/image.png",
+        "Partidas": 9,
+        "WinPct": 44.4,
+        "KD": 2.33
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Ram",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fram.png/image.png",
+        "Partidas": 8,
+        "WinPct": 25.0,
+        "KD": 0.57
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Striker",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fstriker.png/image.png",
+        "Partidas": 8,
+        "WinPct": 50.0,
+        "KD": 0.43
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Mute",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmute.png/image.png",
+        "Partidas": 8,
+        "WinPct": 50.0,
+        "KD": 0.86
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Sentry",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsentry.png/image.png",
+        "Partidas": 6,
+        "WinPct": 50.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Oryx",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Foryx.png/image.png",
+        "Partidas": 6,
+        "WinPct": 16.7,
+        "KD": 0.67
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Brava",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fbrava.png/image.png",
+        "Partidas": 5,
+        "WinPct": 40.0,
+        "KD": 0.6
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Jäger",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fjager.png/image.png",
+        "Partidas": 5,
+        "WinPct": 20.0,
+        "KD": 0.75
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Smoke",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fsmoke.png/image.png",
+        "Partidas": 5,
+        "WinPct": 40.0,
+        "KD": 0.25
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Deimos",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fdeimos.png/image.png",
+        "Partidas": 5,
+        "WinPct": 80.0,
+        "KD": 1.5
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Thatcher",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fthatcher.png/image.png",
+        "Partidas": 5,
+        "WinPct": 0.0,
+        "KD": 0.6
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Melusi",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmelusi.png/image.png",
+        "Partidas": 5,
+        "WinPct": 40.0,
+        "KD": 0.6
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Thermite",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fthermite.png/image.png",
+        "Partidas": 4,
+        "WinPct": 100.0,
+        "KD": 0.67
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Castle",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fcastle.png/image.png",
+        "Partidas": 4,
+        "WinPct": 25.0,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Warden",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fwarden.png/image.png",
+        "Partidas": 4,
+        "WinPct": 50.0,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Finka",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffinka.png/image.png",
+        "Partidas": 4,
+        "WinPct": 25.0,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Caveira",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fcaveira.png/image.png",
+        "Partidas": 4,
+        "WinPct": 25.0,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Kaid",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fkaid.png/image.png",
+        "Partidas": 4,
+        "WinPct": 50.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "IQ",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fiq.png/image.png",
+        "Partidas": 4,
+        "WinPct": 75.0,
+        "KD": 2.33
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Ace",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Face.png/image.png",
+        "Partidas": 3,
+        "WinPct": 66.7,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Bandit",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fbandit.png/image.png",
+        "Partidas": 3,
+        "WinPct": 66.7,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Ying",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fying.png/image.png",
+        "Partidas": 3,
+        "WinPct": 66.7,
+        "KD": 1.5
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Mozzie",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmozzie.png/image.png",
+        "Partidas": 3,
+        "WinPct": 66.7,
+        "KD": 4.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Amaru",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Famaru.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Gridlock",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fgridlock.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 3.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Goyo",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fgoyo.png/image.png",
+        "Partidas": 2,
+        "WinPct": 0.0,
+        "KD": 0.5
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Hibana",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fhibana.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Capitão",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fcapitao.png/image.png",
+        "Partidas": 2,
+        "WinPct": 50.0,
+        "KD": 1.5
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Nøkk",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fnokk.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Buck",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fbuck.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Mira",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmira.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 1.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Montagne",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fmontagne.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 2.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Fuze",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Ffuze.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 3.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Ela",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fela.png/image.png",
+        "Partidas": 1,
+        "WinPct": 0.0,
+        "KD": 0.0
+      },
+      {
+        "Jogador": "Xxrerze11",
+        "Plataforma": "PSN",
+        "Agente": "Kapkan",
+        "Icone": "https://imgsvc.trackercdn.com/url/max-width(180),quality(70)/https%3A%2F%2Ftrackercdn.com%2Fcdn%2Fr6.tracker.network%2Foperators%2Fbadges%2Fkapkan.png/image.png",
+        "Partidas": 1,
+        "WinPct": 100.0,
+        "KD": 1.0
+      }
+    ],
+    "fase": [
+      {
+        "Jogador": "adversario1",
+        "Plataforma": "UPLAY",
+        "History": [
+          "?"
+        ]
+      },
+      {
+        "Jogador": "adversario2",
+        "Plataforma": "UPLAY",
+        "History": [
+          "?"
+        ]
+      },
+      {
+        "Jogador": "adversario3",
+        "Plataforma": "UPLAY",
+        "History": [
+          "?"
+        ]
+      },
+      {
+        "Jogador": "adversario4",
+        "Plataforma": "UPLAY",
+        "History": [
+          "?"
+        ]
+      },
+      {
+        "Jogador": "adversario5",
+        "Plataforma": "UPLAY",
+        "History": [
+          "?"
+        ]
+      }
+    ],
+    "erros": [
+      "adversario3",
+      "adversario4",
+      "adversario5",
+      "adversario2",
+      "adversario3",
+      "adversario4",
+      "adversario5"
+    ]
+  }
+}
