@@ -4,6 +4,15 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+import winreg
+
+def get_chrome_main_version():
+    try:
+        key = winreg.OpenKey(winreg.HKEY_CURRENT_USER, r"Software\Google\Chrome\BLBeacon")
+        version, _ = winreg.QueryValueEx(key, "version")
+        return int(version.split('.')[0])
+    except Exception:
+        return None
 
 def get_r6_team_stats(player_configs, season="40", playlist="ranked", fetch_type="both"):
     # Configurações do Chrome
@@ -15,7 +24,11 @@ def get_r6_team_stats(player_configs, season="40", playlist="ranked", fetch_type
     all_team_results = {"mapas": [], "agentes": [], "fase": [], "erros": []}
 
     try:
-        driver = uc.Chrome(options=options)
+        version = get_chrome_main_version()
+        if version:
+            driver = uc.Chrome(options=options, version_main=version)
+        else:
+            driver = uc.Chrome(options=options)
         wait = WebDriverWait(driver, 15)
 
         for player in player_configs:
@@ -93,7 +106,9 @@ def get_r6_team_stats(player_configs, season="40", playlist="ranked", fetch_type
                                 })
                     except: pass
 
-            except Exception:
+            except Exception as e:
+                import traceback
+                traceback.print_exc()
                 all_team_results["erros"].append(nick)
                 continue
 

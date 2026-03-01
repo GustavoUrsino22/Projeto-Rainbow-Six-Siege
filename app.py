@@ -10,6 +10,7 @@ import os
 from datetime import datetime
 import unicodedata
 from streamlit_echarts import st_echarts
+import streamlit_antd_components as sac
 
 from analyzer import R6Analyzer
 from config import TIME_ALIADO, TIME_ADVERSARIO, SEASON_ATUAL, PLAYLIST
@@ -181,8 +182,15 @@ def atualizar_estado_sessao(equipe, novos_dados, fetch_type="both"):
 
 
 # ══════════════════════════════════════════════
-#  SIDEBAR
+#  SIDEBAR E INICIALIZAÇÃO DE ESTADO
 # ══════════════════════════════════════════════
+
+if "cfg_adv" not in st.session_state:
+    st.session_state["cfg_adv"] = [{"nick": TIME_ADVERSARIO["jogadores"][i]["nick"] if i < len(TIME_ADVERSARIO["jogadores"]) else "", "platform": TIME_ADVERSARIO["jogadores"][i]["platform"] if i < len(TIME_ADVERSARIO["jogadores"]) else "uplay"} for i in range(5)]
+if "cfg_ali" not in st.session_state:
+    st.session_state["cfg_ali"] = [{"nick": TIME_ALIADO["jogadores"][i]["nick"] if i < len(TIME_ALIADO["jogadores"]) else "", "platform": TIME_ALIADO["jogadores"][i]["platform"] if i < len(TIME_ALIADO["jogadores"]) else "uplay"} for i in range(5)]
+if "cfg_filtros" not in st.session_state:
+    st.session_state["cfg_filtros"] = {"mapas": 3, "ops": 5, "top": 10}
 
 with st.sidebar:
     st.image(
@@ -195,59 +203,68 @@ with st.sidebar:
 
     st.divider()
 
-    # ── Configuração de nicks inline ──
-    st.subheader("📝 Time Adversário")
-    col1, col2 = st.columns([7, 3])
-    with col1:
-        st.caption("Nick")
-    with col2:
-        st.caption("Plataforma")
-
-    for i in range(5):
-        df_nick = TIME_ADVERSARIO["jogadores"][i]["nick"] if i < len(TIME_ADVERSARIO["jogadores"]) else ""
-        df_plat = TIME_ADVERSARIO["jogadores"][i]["platform"] if i < len(TIME_ADVERSARIO["jogadores"]) else "uplay"
-        c1, c2 = st.columns([7, 3])
-        with c1:
-            st.text_input("Nick Adversário", value=df_nick, key=f"adv_nick_{i}", label_visibility="collapsed")
-        with c2:
-            st.selectbox("Plataforma Adversário", ["uplay", "psn", "xbl"], index=["uplay", "psn", "xbl"].index(df_plat) if df_plat in ["uplay", "psn", "xbl"] else 0, key=f"adv_plat_{i}", label_visibility="collapsed")
-
-    st.subheader("📝 Meu Time")
-    col1, col2 = st.columns([7, 3])
-    with col1:
-        st.caption("Nick")
-    with col2:
-        st.caption("Plataforma")
-
-    for i in range(5):
-        df_nick = TIME_ALIADO["jogadores"][i]["nick"] if i < len(TIME_ALIADO["jogadores"]) else ""
-        df_plat = TIME_ALIADO["jogadores"][i]["platform"] if i < len(TIME_ALIADO["jogadores"]) else "uplay"
-        c1, c2 = st.columns([7, 3])
-        with c1:
-            st.text_input("Nick Aliado", value=df_nick, key=f"ali_nick_{i}", label_visibility="collapsed")
-        with c2:
-            st.selectbox("Plataforma Aliado", ["uplay", "psn", "xbl"], index=["uplay", "psn", "xbl"].index(df_plat) if df_plat in ["uplay", "psn", "xbl"] else 0, key=f"ali_plat_{i}", label_visibility="collapsed")
-
-    st.divider()
-
-    # Removido os botões globais da sidebar para otimizar o carregamento.
-    # A busca agora é contextual dentro de cada Tab.
-
-
-
-    # Filtros
-    min_partidas_mapa = st.slider(
-        "Min. partidas (Mapas)",
-        1, 20, 3
+    config_step = sac.steps(
+        items=[
+            sac.StepsItem(title='Adversário', icon='person-fill-exclamation'),
+            sac.StepsItem(title='Meu Time', icon='person-fill-check'),
+            sac.StepsItem(title='Filtros', icon='sliders'),
+        ],
+        placement='vertical',
+        size='sm',
+        return_index=True
     )
-    min_partidas_op = st.slider(
-        "Min. partidas (Operadores)",
-        1, 20, 5
-    )
-    top_n_ops = st.slider(
-        "Top N Operadores",
-        5, 25, 10
-    )
+
+    if config_step == 0:
+        st.subheader("📝 Time Adversário")
+        col1, col2 = st.columns([7, 3])
+        with col1:
+            st.caption("Nick")
+        with col2:
+            st.caption("Plataforma")
+
+        for i in range(5):
+            c1, c2 = st.columns([7, 3])
+            with c1:
+                cur_nick = st.text_input("Nick", value=st.session_state["cfg_adv"][i]["nick"], key=f"adv_nick_inp_{i}", label_visibility="collapsed")
+            with c2:
+                idx = ["uplay", "psn", "xbl"].index(st.session_state["cfg_adv"][i]["platform"]) if st.session_state["cfg_adv"][i]["platform"] in ["uplay", "psn", "xbl"] else 0
+                cur_plat = st.selectbox("Plat", ["uplay", "psn", "xbl"], index=idx, key=f"adv_plat_inp_{i}", label_visibility="collapsed")
+            if cur_nick != st.session_state["cfg_adv"][i]["nick"] or cur_plat != st.session_state["cfg_adv"][i]["platform"]:
+                st.session_state["cfg_adv"][i]["nick"] = cur_nick
+                st.session_state["cfg_adv"][i]["platform"] = cur_plat
+
+    elif config_step == 1:
+        st.subheader("📝 Meu Time")
+        col1, col2 = st.columns([7, 3])
+        with col1:
+            st.caption("Nick")
+        with col2:
+            st.caption("Plataforma")
+
+        for i in range(5):
+            c1, c2 = st.columns([7, 3])
+            with c1:
+                cur_nick = st.text_input("Nick", value=st.session_state["cfg_ali"][i]["nick"], key=f"ali_nick_inp_{i}", label_visibility="collapsed")
+            with c2:
+                idx = ["uplay", "psn", "xbl"].index(st.session_state["cfg_ali"][i]["platform"]) if st.session_state["cfg_ali"][i]["platform"] in ["uplay", "psn", "xbl"] else 0
+                cur_plat = st.selectbox("Plat", ["uplay", "psn", "xbl"], index=idx, key=f"ali_plat_inp_{i}", label_visibility="collapsed")
+            if cur_nick != st.session_state["cfg_ali"][i]["nick"] or cur_plat != st.session_state["cfg_ali"][i]["platform"]:
+                st.session_state["cfg_ali"][i]["nick"] = cur_nick
+                st.session_state["cfg_ali"][i]["platform"] = cur_plat
+
+    elif config_step == 2:
+        st.subheader("⚙️ Filtros")
+        val_mapas = st.slider("Min. partidas (Mapas)", 1, 20, st.session_state["cfg_filtros"]["mapas"])
+        val_ops = st.slider("Min. partidas (Operadores)", 1, 20, st.session_state["cfg_filtros"]["ops"])
+        val_top = st.slider("Top N Operadores", 5, 25, st.session_state["cfg_filtros"]["top"])
+        
+        st.session_state["cfg_filtros"]["mapas"] = val_mapas
+        st.session_state["cfg_filtros"]["ops"] = val_ops
+        st.session_state["cfg_filtros"]["top"] = val_top
+
+min_partidas_mapa = st.session_state["cfg_filtros"]["mapas"]
+min_partidas_op = st.session_state["cfg_filtros"]["ops"]
+top_n_ops = st.session_state["cfg_filtros"]["top"]
 
 
 # ══════════════════════════════════════════════
@@ -255,13 +272,11 @@ with st.sidebar:
 # ══════════════════════════════════════════════
 
 def get_jogadores_from_state(prefix):
-    """Coleta jogadores dos inputs individuais da sidebar."""
+    """Coleta jogadores dos inputs persistidos do config state."""
     jogadores = []
-    for i in range(5):
-        nick = st.session_state.get(f"{prefix}_nick_{i}", "").strip()
-        if nick:
-            plat = st.session_state.get(f"{prefix}_plat_{i}", "uplay")
-            jogadores.append({"nick": nick, "platform": plat})
+    for item in st.session_state[f"cfg_{prefix}"]:
+        if item["nick"].strip():
+            jogadores.append({"nick": item["nick"].strip(), "platform": item["platform"]})
     return jogadores
 
 
@@ -299,16 +314,16 @@ st.markdown(
 #  TABS PRINCIPAIS
 # ══════════════════════════════════════════════
 
-tab1, tab2, tab3, tab4 = st.tabs([
-    "🗺️ Mapas Adversário",
-    "🎖️ Operadores Adversário",
-    "📊 Comparativo",
-    "🔥 Fase dos Jogadores"
-])
+aba_selecionada = sac.tabs([
+    sac.TabsItem(label='🗺️ Mapas Adversário'),
+    sac.TabsItem(label='🎖️ Operadores Adversário'),
+    sac.TabsItem(label='📊 Comparativo'),
+    sac.TabsItem(label='🔥 Fase dos Jogadores')
+], align='center', size='md', variant='outline')
 
 
 # ── TAB 1: MAPAS DO ADVERSÁRIO ──
-with tab1:
+if aba_selecionada == '🗺️ Mapas Adversário':
     col_hdr, col_btn1, col_btn2 = st.columns([2, 1, 1])
     with col_hdr:
         st.header("🗺️ Ferramenta 1: Melhores Mapas")
@@ -526,7 +541,7 @@ with tab1:
         )
 
 # ── TAB 2: OPERADORES DO ADVERSÁRIO ──
-with tab2:
+if aba_selecionada == '🎖️ Operadores Adversário':
     col_hdr, col_btn1 = st.columns([3, 1])
     with col_hdr:
         st.header("🎖️ Ferramenta 2: Operadores do Adversário")
@@ -800,7 +815,7 @@ with tab2:
 
 
 # ── TAB 3: COMPARATIVO ──
-with tab3:
+if aba_selecionada == '📊 Comparativo':
     col_hdr, col_btn = st.columns([3, 1])
     with col_hdr:
         st.header("📊 Comparativo de Times")
@@ -910,7 +925,7 @@ with tab3:
 
 
 # ── TAB 4: FASE DOS JOGADORES ──
-with tab4:
+if aba_selecionada == '🔥 Fase dos Jogadores':
     col_hdr, col_btn1, col_btn2 = st.columns([2, 1, 1])
     with col_hdr:
         st.header("🔥 Momento Atual dos Jogadores")
